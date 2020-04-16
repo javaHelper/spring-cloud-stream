@@ -1,0 +1,10 @@
+server:
+  port: 9192
+
+# Using the command from read me create Topic
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: javatechie-stream

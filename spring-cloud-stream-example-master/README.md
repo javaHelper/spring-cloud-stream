@@ -3,16 +3,17 @@
 ###### Apache-Kafka Binary Distribution [Download](http://apachemirror.wuchna.com/kafka/2.3.1/kafka_2.11-2.3.1.tgz).
 
 
-zookeeper-server-start.bat C:\kafka_2.11-2.3.1\config\zookeeper.properties
+`zookeeper-server-start.bat C:\kafka_2.11-2.3.1\config\zookeeper.properties`
 
-kafka-server-start.bat C:\kafka_2.11-2.3.1\config\server.properties
+`kafka-server-start.bat C:\kafka_2.11-2.3.1\config\server.properties`
 
-zookeeper-shell.bat localhost:2181 ls /brokers/ids
+`zookeeper-shell.bat localhost:2181 ls /brokers/ids`
 
 
-kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+`kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test`
 
-kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test --from-beginning
+`kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test --from-beginning`
+
 
 I went through this video https://www.youtube.com/watch?v=TTsOoQ6_QB0 and it solved my issue.
 
